@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+<button 1 onclick="english()">English</button>
+<button 2 onclick="spanish()">Spanish</button>
+
+<p id="intro"></p>
+
+<script>
+function english() {
+  document.getElementById("intro").innerHTML = 
+"Enter our Abstract Art Competition!<br> Draw your artwork in the space below.<br> When complete, select 'Save Image' in the Drawing Menu.<br>Then attach your masterpiece by selecting 'Attach image".<br>When you have completed your details, select 'Submit Form'.<br> Good luck!!";
+}
+function spanish() { 
+  document.getElementById("intro").innerHTML = 
+"¡Participa en nuestro concurso de arte abstracto!<br>
+Dibuja tu obra de arte en el espacio de abajo. Cuando termine, seleccione 'Save Image' en el Menú de dibujo.<br>
+Luego adjunte su obra maestra seleccionando 'Attach image'.<br>
+Cuando haya completado sus datos, seleccione 'Submit Form'.";
+}
+</script>
+
+<!--
+
+<h1 style="color:greenyellow;">Concurso de Arte Abstracto</h1>
+<p style="color:greenyellow;">
+
+
+<h1 style="color: blue;">Abstract Art Competition</h1>
+<p style="color:blue;">
+-->
+
+<h2>Your Canvas</h2>
+<canvas id="yourCanvas" width="400" height="400" style="border:1px solid black;">
+Your does not support the HTML canvas tag.  
+</canvas>
+
+<h2>Registration Form</h2>
+<form action="/process.php" target="_blank" method="post">
+  <fieldset>
+    <legend>Your details</legend>
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required=""><br>
+    <label for="password">Password:</label><br>    
+    <input type="password" id="password" name="password" minlength="8" required><br>
+    <label for="confpassword">Confirm Password:</label><br>
+    <input type="password" id="confpassword" name="confpassword" required><br>
+    <label for="phone">Phone:</label><br>
+    <input type="number" id="phone" name="phone" maxlength="10" required><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+</body> 
+</head>
+</html>
