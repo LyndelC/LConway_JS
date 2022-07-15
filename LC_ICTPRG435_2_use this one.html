@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="LC">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title> 
+</head>
+<body>
+
+  <div>
+    <h1 id="hEng" style = "text-align:center; color:blue">Abstract Art Competition</h1>
+    
+    <p id="pEng" style = "color:blue">Enter our Abstract Art Competition!<br>
+    Draw your artwork in the square below.<br>
+    When you are happy with your drawing,<br> complete your registration, attach your masterpiece by<br> choosing your file and then submit.<br>
+    Good luck!! 
+    </p>
+    </div>  
+
+
+  <div>
+    <button id="english" type="button" style = "background-color:blue; color:white">English</input>
+    <button id="spanish" type="button"  style = "background-color:green; color:white">Spanish</input>
+  </div>
+ 
+  <style>
+    div {
+      width: 400px;
+    }
+    
+  </style>  
+<div style = color:black>
+<h2>Your Canvas</h2>
+<canvas id="yourCanvas" width="400" height="400" style="border:2px solid black"></canvas><br>
+</div>
+
+<div>
+ <div>
+ <!-- colour fill palette -->
+  <input type="color" id="fillPalette" name="fill Palette" 
+        value="#e66465"><br>       
+  <label for="fillPalette">Select fill colour</label><br>
+ </div>
+
+ <!-- colour line palette -->
+ <div>
+  <input type="color" id="linePalette" name="linePalette" 
+          value="#e66465"><br>
+  <label for="linePalette">Select line colour</label><br>
+​ </div>
+
+ <!-- x start coordinate-->
+  <div>
+    <label for="xstart">X start</label>
+    <input type="number" id="xstart" name="xstart"
+           min="0" max="400">
+  </div>
+​
+ <!-- select y start coordinate -->
+  <div>
+    <label for="y">Y start</label>
+    <input type="number" id="ystart" name="ystart"
+           min="0" max="400">
+  </div>
+​
+ <!-- x end coordinate-->
+ <div>
+  <label for="x">X end </label>
+  <input type="number" id="xend" name="xend"
+         min="0" max="400">
+  </div>
+​
+  <!-- select y end coordinate -->
+  <div>
+  <label for="y">Y end </label>
+  <input type="number" id="yend" name="yend"
+         min="0" max="400"><br><br>
+  </div>
+</div>
+
+<div>
+  <!-- select shape -->
+  <div>
+    <label for="shape">Shape:</label>
+    <select name="shape" id="shape">
+      <option value="circle">circle</option>
+      <option value="line">line</option>
+      <option value="quadrilateral">quadrilateral</option>
+    </select>
+  </div>
+​​
+  <!-- select radius -->
+  <div>
+    <label for="radius">Radius</label>
+    <input type="number" id="radius" name="radius"
+         min="0" max="200"><br><br>
+  </div>
+
+  <!-- select height -->
+  <div >
+    <label for="height">Height</label>
+    <input type="number" id="height" name="height"
+          min="0" max="400"><br><br>
+  </div>
+
+  <!-- select width -->
+  <div>
+    <label for="width">Width</label>
+    <input type="number" id="width" name="width"
+         min="0" max="400"><br><br>
+  </div>
+
+  <!-- draw button -->
+  <div>
+    <button id="draw">Draw</button> <br><br>       
+  </div>   
+  
+  <!-- clear button -->
+  <div>
+    <button id="clear">Clear</button>        
+  </div>
+</div>
+ 
+<div>
+  <!--Registration Form-->
+  <div style="position:absolute; top:230px; left:500px">
+<h2>Registration Form</h2>
+<form id="registrationForm" action="/process.php" target="_blank" method="post">
+  <fieldset>
+    <legend>Your details</legend>
+    <label for="userName">Username   </label>
+  <input type="text" name="userName" id="userName" required><br><br>
+
+  <label for="email-address">Email</label>
+  <input type="email" name="email" id="email-address" placeholder="email@email.com" required ><br><br>
+
+  <label for="pwd">Password</label>
+  <input type="password" id="pwd" name="pwd" required ><br><br>
+
+  <label for="cnfpwd">Confirm Password</label>
+  <input type="password" id="cnfpwd" name="pwd" required><br><br>
+
+  <label for="phone">Mobile No</label>
+  <input type="tel" id="phone" name="phone" size = "12" placeholder="9999999999" pattern="[0-9]{10}" ><br><br>
+
+  <label for="upload"> </label>
+  <input type="file" name="upload" accept=".png" required><br><br>
+
+  <input type="submit" value="Submit" id="submit"><br><br>
+  <input type="reset" value="Reset"><br>   
+
+  </fieldset>
+</form>
+
+</div>
+
+</div>
+
+<script src = "LC.js"></script> 
+</body>
